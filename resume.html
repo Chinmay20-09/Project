@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume - Chinmay Kolte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <style>
+        #productsSection {
+            display: none;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        #productsSection.open { display: block; }
+        #productsToggle {
+            cursor: pointer;
+            user-select: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        #productsToggle .arrow {
+            display: inline-block;
+            transition: transform 0.3s ease;
+            font-size: 0.85em;
+        }
+        #productsToggle.open .arrow { transform: rotate(180deg); }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Chinmay</a>
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="landing.html">← Landing</a>
+      </li>
+      <li class="nav-item position-relative">
+        <a class="nav-link" href="#" id="productDropdown">Products ▼</a>
+        <ul class="dropdown-menu" id="dropdownMenu">
+          <li><a class="dropdown-item" href="#">Product 1</a></li>
+          <li><a class="dropdown-item" href="#">Product 2</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ✅ Profile / Name — id="profile" -->
+<div class="container my-5" id="profile">
+    <div class="resume-card">
+
+        <div class="text-center mb-4">
+            <h1 class="fw-bold">Chinmay Kolte</h1>
+            <p class="text-white">B.Tech CSE (AIML) Student</p>
+        </div>
+
+        <!-- ✅ Contact — id="contact" -->
+        <div id="contact">
+            <div class="section-title">Contact</div>
+            <p>Email: chinmaykolte883@email.com</p>
+            <p>Phone: +91 74004 58816</p>
+            <p>Location: India</p>
+            <p><a href="https://www.linkedin.com/in/chinmaykolte" target="_blank">LinkedIn</a></p>
+        </div>
+
+        <div class="section-title">Education</div>
+        <p><strong>B.E in Computer Science (AIML)</strong></p>
+        <p>Second Year Student</p>
+
+        <div class="section-title">Skills</div>
+        <span class="badge bg-primary skill-badge">HTML</span>
+        <span class="badge bg-success skill-badge">CSS</span>
+        <span class="badge bg-warning text-dark skill-badge">JavaScript</span>
+        <span class="badge bg-info text-dark skill-badge">Python</span>
+        <span class="badge bg-danger skill-badge">Git & GitHub</span>
+
+        <!-- ✅ Projects — id="projects" -->
+        <div id="projects">
+            <div class="section-title mt-4">Projects</div>
+            <ul>
+                <li>Personal Portfolio Website</li>
+                <li>Lakshman Rekha - Smart Emergency Alert System</li>
+                <li>To-Do List Web App</li>
+            </ul>
+        </div>
+
+        <div class="section-title mt-4">Experience</div>
+        <p>Full Stack Web Development Intern - RineX</p>
+
+    </div>
+</div>
+
+<!-- Product Section (Collapsible) -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">
+    <span id="productsToggle">Products <span class="arrow">▼</span></span>
+  </h2>
+  <div id="productsSection">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card p-3"><h5>Product 1</h5><p>Simple productivity tool for students.</p></div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3"><h5>Product 2</h5><p>Task management app with reminders.</p></div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3"><h5>Product 3</h5><p>AI-based study assistant (future idea).</p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+  const productsToggle = document.getElementById("productsToggle");
+  const productsSection = document.getElementById("productsSection");
+  productsToggle.addEventListener("click", function () {
+    productsSection.classList.toggle("open");
+    productsToggle.classList.toggle("open");
+  });
+</script>
+
+</body>
+</html>
