@@ -1,0 +1,6 @@
+{
+  "name": "Personal Software Hub",
+  "description": "A premium, minimal, modern, and engineering-focused personal software hub to discover, download, and track software projects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
